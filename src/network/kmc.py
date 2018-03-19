@@ -48,11 +48,11 @@ def k_means(training_data, k, stages):
                 centroids[i] = list_average(clusters[i])
                 
     for i, centroid in enumerate(centroids):
-        sigma = 0
+        """ sigma = 0
         for point in clusters[i]:
             sigma += np.linalg.norm(np.array(point) - np.array(centroid)) / len(centroids)
-        beta.append(1.0 / (2 * sigma * sigma))
-        #beta.append(0.3)
+        beta.append(1.0 / (2 * sigma * sigma)) """
+        beta.append(0.3)
         
     return map(np.array, centroids), beta
 
